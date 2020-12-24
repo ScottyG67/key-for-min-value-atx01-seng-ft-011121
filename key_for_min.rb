@@ -5,13 +5,11 @@ def key_for_min_value(name_hash)
 answer = nil
 holding =1000000
 name_hash.each do |keys,value|
-  if value
-
-winner=""
-  passengers.each do |suite, name|
-    if suite == :suite_a && name.start_with?("A")
-      winner = name
-    end
+  if value < holding
+    answer = keys
+    holding = value
   end
-  winner
+end
+answer
+
 end
